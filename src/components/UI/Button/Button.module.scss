@@ -1,0 +1,17 @@
+@import '../../../variables.scss';
+
+.Button {
+  box-shadow: 1px 1px 1px rgba($color-black, .25);
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgba($color-blood, .5);
+  outline: none;
+  border: none;
+
+  text-transform: uppercase;
+  font-family: $font-arima;
+  color: $color-white;
+  text-shadow: 1px 1px 1px rgba($color-black, .25);
+
+  display: block;
+}

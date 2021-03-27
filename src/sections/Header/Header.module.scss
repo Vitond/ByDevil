@@ -1,0 +1,137 @@
+@import '../../variables.scss'; 
+
+.Header {
+  height: 100vh;
+  margin-bottom: 20rem;
+  margin-top: 5rem;
+
+  @media screen and (max-width: 600px) {
+    margin-bottom: 18rem;
+  }
+
+  position: relative;
+  overflow: hidden;
+
+  &__heading {
+    padding-top: 16rem;
+
+    font-family: $font-sister;
+    font-size: 12rem;
+    font-weight: 400;
+    color: $color-white;
+    text-align: center;
+
+    @media screen and (max-width: 600px) {
+      padding-top: 26rem;
+
+      font-size: 9rem;
+    }
+    @media screen and (max-width: 400px) {
+      padding-top: 12rem;
+    }
+  }
+  &__cta {
+    width: 30rem;
+    box-shadow: 1px 1px 1px rgba($color-black, .25);
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgba($color-blood, .5);
+    height: 6rem;
+    outline: none;
+    border: none;
+
+    text-transform: uppercase;
+    font-family: $font-arima;
+    font-size: 2.8rem;
+    font-weight: 500;
+    color: $color-white;
+    text-shadow: 1px 1px 1px rgba($color-black, .25);
+
+    display: block;
+
+    position: absolute;
+    bottom: 5rem;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+
+    @media screen and (max-width: 600px) {
+      height: 6rem;
+
+      font-size: 2.2rem;
+
+      bottom: 8rem; 
+    }
+  }
+  &__torn {
+    width: 120rem;
+    height: 100rem;
+    opacity: .25;
+
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(-30deg);
+    left: 50%;
+    top: 30rem;
+    z-index: -1;
+
+    @media screen and (max-width: 1100px) {
+      transform: translate(-50%, -50%) rotate(-30deg) scale(0.7);
+    }
+    @media screen and (max-width: 400px) {
+      top: 18rem;
+    }
+    
+  }
+  &__centipede {
+    position: absolute;
+
+    opacity: .5;
+
+    &_left {
+      height: 30rem;
+
+      transform: rotate(35deg);
+      left: 0;
+      top: 50rem;
+
+      @media screen and (max-width: 1100px) {
+        transform: rotate(35deg) scale(0.7);
+      }
+      @media screen and (max-width: 800px) {
+        transform: rotate(35deg) scale(0.5);
+      }
+      @media screen and (max-width: 600px) {
+        top: 42rem;
+      }
+      @media screen and (max-width: 500px) {
+        top: 36rem;
+      }
+      @media screen and (max-width: 400px) {
+        top: 24rem;
+        left: -6rem;
+      }
+    }
+    &_right {
+      height: 40rem;
+      
+      right: 0;
+      transform: rotate(-30deg);
+      top: 6rem;
+
+      @media screen and (max-width: 1100px) {
+        transform: rotate(-30deg) scale(0.7);
+      }
+      @media screen and (max-width: 800px) {
+        transform: rotate(-30deg) scale(0.5);
+      }
+      @media screen and (max-width: 750px) {
+        top: -6rem;
+        right: -2rem;
+        transform: rotate(-120deg) scale(0.4);
+      }
+      @media screen and (max-width: 400px) {
+        top: -12rem;
+      }
+    }
+  }
+}

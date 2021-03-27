@@ -1,0 +1,56 @@
+@import '../../variables.scss';
+
+.Products {
+  margin-bottom: 24rem;
+
+  position: relative;
+
+  @media screen and (max-width: 600px) {
+    margin-bottom: 18rem;
+  }
+
+  &__smoke {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    opacity: .1;
+    z-index: 1;
+  }
+  &__hand {
+    fill: $color-blood;
+    width: 48rem;
+    height: 48rem;
+
+    position: absolute;
+    bottom: -20rem;
+    right: 3rem;
+
+    opacity: .07;
+
+    @media screen and (max-width: 1500px) {
+      transform: scale(0.8);
+    }
+  }
+  &__torn {
+    width: 100rem;
+    height: 50rem;
+    position: absolute;
+    z-index: -1;
+    top: 66rem;
+    left: 0;
+
+    opacity: .1;
+
+    @media screen and (max-width: 1050px) {
+      transform: scale(0.7);
+      top: 18rem;
+    }
+    @media screen and (max-width: 900px) {
+      transform: scale(0.4) translateX(-20rem);
+    }
+    @media screen and (max-width: 600px) {
+      left: -20rem;
+      transform: scale(0.3) translateX(-25rem);
+    }
+  }
+}

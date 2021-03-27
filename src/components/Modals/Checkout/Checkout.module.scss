@@ -1,0 +1,110 @@
+@import '../../../variables.scss';
+
+.Checkout {
+  width: 50%;
+  height: 60rem;
+  background-color: $color-gray-light-2;
+  border: 8px solid rgba($color-gray-light-2, .25);
+
+  display: flex;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+
+  &__left {
+    width: 50%;
+    margin-top: 1.5rem;
+    border-right: 2px solid rgba($color-brown, .1);
+  }
+  &__right {
+    width: 50%;
+    margin-top: 3rem;
+
+    color: $color-black;
+    font-size: 1.9rem;
+
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  &__product {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 5rem;
+    border-top: 2px solid rgba($color-brown, .1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:last-child {
+      border-bottom: 2px solid rgba($color-brown, .1);
+    }
+  }
+  &__svgs {
+    height: 7rem;
+
+    display: flex;
+    justify-content: center;
+  }
+  &__BD {
+    fill: $color-blood;
+    width: 6rem;
+    height: 100%;
+  }
+  &__logo {
+    fill: #7A4145;
+    width: 6rem;
+    height: 100%;
+  }
+  &__hint {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+
+    color: $color-black;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    letter-spacing:1px;
+    text-align: center;
+  }
+  &__input {
+    height: 4rem;
+    border: none;
+    outline: none;
+    
+    background: radial-gradient(135.61% 135.62% at 50% 50%, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+  }
+  &__set {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+    color: $color-black;
+    font-size: 1.9rem;
+
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+  &__label {
+
+  }
+  &__button {
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 4rem;
+    width: 20rem;
+    background-color: $color-blood;
+
+    font-size: 2.2rem;
+  }
+}

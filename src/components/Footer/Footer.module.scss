@@ -1,0 +1,118 @@
+@import '../../variables.scss';
+
+.Footer {
+  background-color: $color-black;
+
+  color: $color-blood;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-image: linear-gradient(to top, $color-blood, transparent);
+
+    display: block;
+
+    position: absolute;
+    left: 0;
+    top: -4px;
+  }
+
+  &__heading {
+    text-align: center;
+    font-size: 2.7rem;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__list {
+    width: 60%;
+    height: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1300px) {
+      width: 80%;
+    }
+    @media screen and (max-width: 800px) {
+      height: auto;
+      padding-top: 12rem;
+
+      flex-direction: column;
+    }
+  }
+  &__item {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 800px) {
+      margin-bottom: 3rem;
+    }
+
+    &_BD {
+      flex-direction: row;
+      align-items: center;
+
+      @media screen and (max-width: 800px) {
+        justify-content: center;
+      }
+
+      & svg:first-child {
+        height: 8rem;
+        width: 8rem;
+
+        fill: $color-blood;
+      }
+      & svg:last-child {
+        height: 8rem;
+        width: 5rem;
+
+        fill: #7A4145;
+      }
+    }
+    &_phone {
+      align-items: center;
+      justify-content: center;
+
+      & svg {
+        width: 8rem;
+        height: 8rem;
+
+        fill: $color-blood;
+      }
+    }
+    &_mail {
+      justify-content: center;
+      align-items: center;
+
+      & svg {
+        width: 8rem;
+        height: 8rem;
+
+        fill: $color-blood;
+      }
+    }
+    &_AmnioN {
+      justify-content: center;
+      align-items: center;
+
+      & svg {
+        width: 8rem;
+        height: 8rem;
+
+        fill: $color-blood;
+      }
+    }
+  }
+}

@@ -1,0 +1,151 @@
+@import '../../variables.scss';
+
+.Order {
+  padding-top: 6rem;
+  min-height: 100rem;
+  margin-top: 5rem;
+
+  display: flex;
+
+  position: relative;
+
+  @media screen  and (max-width: 1200px) {
+    padding-top: 8rem;
+
+    flex-direction: column;
+  }
+
+  &__basket,
+  &__information {
+
+    position: relative;
+
+    &::before {
+      content: "";
+      height: 1px;
+      width: 48rem;
+      background-color: rgba($color-gray-light-2, .25);
+
+      display: block;
+
+      position: absolute;
+      left: 50%;
+      top: -2rem;
+
+      transform: translateX(-50%);
+
+      @media screen and (max-width: 1300px) {
+        width: 70%;
+      }
+      @media screen and (max-width: 600px) {
+        width: 100vw;
+      }
+    }
+   
+  }
+  &__basket {
+    width: 40%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen  and (max-width: 1200px) {
+     width: 100%;
+     margin-bottom: 18rem;
+    }
+    @media screen and (max-width: 600px) {
+      margin-bottom : 4rem;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+  &__information {
+    flex-grow: 1;
+
+    @media screen and (max-width: 600px) {
+      &::before {
+        width: 100vw;
+      }
+    }
+  }
+  &__heading {
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  &__form {
+
+  }
+  &__cancel {
+    cursor: pointer;
+    width: 6rem;
+    height: 6rem;
+
+    position: absolute;
+    top: 3rem;
+    right: 0;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 4rem;
+      height: 4px;
+      background-color: rgba($color-blood, .75);
+
+
+      display: block;
+
+      position: absolute;
+  
+    }
+    &::after {
+      transform: rotate(45deg);
+    }
+    &::before {
+      transform: rotate(-45deg);
+    }
+  }
+  &__total {
+    margin-top: 6rem;
+
+    text-transform: uppercase;
+    font-weight: 400;
+
+    position: relative;
+
+    &::before {
+      content: "";
+      height: 1px;
+      width: 48rem;
+      background-color: rgba($color-gray-light-2, .25);
+
+      display: block;
+
+      position: absolute;
+      left: 50%;
+      top: -2rem;
+
+      transform: translateX(-50%);
+
+      @media screen and (max-width: 1300px) {
+        width: 240%;
+      }
+      @media screen and (max-width: 600px) {
+        width: 100vw;
+      }
+    }
+  }
+}
+
+.EmptyBasket {
+  width: 100%;
+  margin-top: 20rem;
+
+  &__heading {
+    font-weight: 400;
+    text-align: center;
+  }
+}
