@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import stripe
 import pdfkit
 
-stripe.api_key = 'sk_test_51IY5xGHloBxDNHwGowYBslzs8Y3Y29joKAEX3TbNm59TGym59AgIk7hlE8jDZMDElHumAs8XpRWTcrrd4xozLnwv00I6ZJPgv6';
+
 
 app = Flask(__name__)
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
