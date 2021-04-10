@@ -22,7 +22,7 @@ class Toolbar extends Component {
 
     return (
       <div className={classes.Toolbar}>
-        <svg className={classes.Logo}>
+        <svg className={classes.Logo} onClick={() => {this.props.history.push('/')}}>
             <use xlinkHref="/img/sprite.svg#logo"></use>
         </svg>
         <svg className={classes.BD}>

@@ -12,6 +12,7 @@ import Header from './sections/Header/Header';
 import Order from './sections/Order/Order';
 import Checkout from './components/Modals/Checkout/Checkout';
 import Backdrop from './components/UI/Backdrop/Backdrop';
+import Success from './components/Modals/Success/Success';
 
 import Aux from './hoc/Aux';
 
@@ -24,41 +25,24 @@ class App extends Component {
       count: 0,
       total: 0
     },
-    
+    products: []
   }
 
-  componentDidMount() {
-    const basket = JSON.parse(localStorage.getItem('basket'));
-    if (basket) {
-      this.setState({basket: basket});
-    }
-  }
-
-  products = [
-    {
-      description: 'Lorem impusm ronlaní písmoLorem impusm ronlaní písmoLorem impusm ronlaní písmoLorem impusm ronlaní písmoLorem impusm ronlaní písmoLorem impusm ronlaní písmoLorem impusm ronlaní písmoArchitects DaughterArchitects DaughterArchitects DaughterArchitects Daughter',
-      imageSrcPath: "/img/sweatshirt.png",
-      id: 0,
-      name: 'XD',
-      price: 500
-    },
-    {
-      description: 'Lorem impusm ronlaní písmoLorem impusm ronlaní písmoLorem impusm ronlaní písmoLorem impusm ronlaní písmoLorem impusm ronlaní písmoLorem impusm ronlaní písmoLorem impusm ronlaní písmoArchitects DaughterArchitects DaughterArchitects DaughterArchitects Daughter',
-      imageSrcPath: "/img/sweatshirt.png",
-      id: 1,
-      name: 'LOL',
-      price: 400
-    }
-  ]
+  clearBasket = () => {
+    this.setState({basket: {products: [], count: 0, total: 0}});
+    localStorage.setItem('basket', JSON.stringify({products: [], count: 0, total: 0}));
+  };
 
   updateLocalStorageBasket = basket => {
     localStorage.setItem('basket', JSON.stringify(basket));
   }
 
   updateBasketAmountAndPrice(updatedProducts) {
-    const count = updatedProducts.length
+    const count = updatedProducts.reduce((prevValue, product) => {
+      return prevValue + product.amount; 
+    }, 0);
     const total = updatedProducts.reduce((prevValue, product) => {
-      return prevValue + product.price;
+      return prevValue + product.price*product.amount;
         }, 0);
     const updatedBasket = {products: updatedProducts, total: total, count: count};
     this.setState({basket: updatedBasket});
@@ -95,6 +79,8 @@ class App extends Component {
       updatedProducts = [...this.state.basket.products, {...product, amount: 1}];
     }
     this.updateBasketAmountAndPrice(updatedProducts);
+    console.log(this.state.basket.products);
+    console.log(localStorage.getItem('basket'));
   }
 
   render() {
@@ -106,11 +92,11 @@ class App extends Component {
           <Route path="/order" render={() => {
             return (
               <Aux>
-                <Route path="/order/checkout" product={this.state.basket.products} render={() => {
+                <Route path="/order/checkout" render={() => {
                   return (
                     <Aux>
                         <Backdrop show={true} clicked={() => {this.props.history.push('/order')}}></Backdrop>
-                        <Checkout products={this.state.basket.products}></Checkout>
+                        <Checkout clearBasket={this.clearBasket} products={this.state.basket.products}></Checkout>
                     </Aux>
                   );
                 }}></Route>
@@ -123,9 +109,13 @@ class App extends Component {
           <Route path="/" render={() => {
             return (
               <Aux>
+                <Route path="/success">
+                  <Backdrop show={true} clicked={() => {this.props.history.push('/')}}></Backdrop>
+                  <Success></Success>
+                </Route>
                 <Toolbar basket={this.state.basket}/>
                 <Header />
-                <Products addProductToBasket={this.addProductToBasket} products={this.products}/>
+                <Products addProductToBasket={this.addProductToBasket} products={this.state.products}/>
                 <Story />
                 <Footer />
               </Aux>
@@ -134,6 +124,21 @@ class App extends Component {
         </Switch>
       </div>
     );
+  }
+
+  componentDidMount = () => {
+    const basket = JSON.parse(localStorage.getItem('basket'));
+    if (basket) {
+      this.setState({basket: basket}, () => {console.log(this.state.basket)});
+    }
+    console.log(basket);
+    fetch('/products')
+    .then(response => {
+      return response.json();
+    }) 
+    .then(data => {
+      this.setState({products: data.products});
+    })
   }
   
 }

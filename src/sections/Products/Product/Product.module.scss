@@ -1,4 +1,5 @@
 @import '../../../variables.scss';
+@import '../../../animations.scss';
 
 .Product {
   display: flex;
@@ -118,6 +119,9 @@
 
     transform: translateY(-25%);
 
+    animation: bounce 2s infinite;
+    animation-timing-function: ease-in-out;  
+
     @media screen and (max-width: 900px) {
       transform: translateY(-10%);
     }
@@ -152,6 +156,8 @@
 
    font-size: 1.8rem;
 
+   transition: all .2s;
+
     @media screen and (max-width: 600px) {
       margin-bottom: 3rem;
 
@@ -159,6 +165,10 @@
     }
     @media screen and (max-width: 500px) {
       flex-shrink: 0;
+    }
+  
+    &:hover {
+      transform: translateY(-3px)
     }
   }
   &__input {
@@ -185,6 +195,12 @@
     cursor: pointer;
 
     position: relative;
+
+    transition: all .2s;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
 
     &:not(:last-child) {
       margin-right: 3rem;

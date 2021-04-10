@@ -30,6 +30,12 @@
     margin-bottom: 6rem;
 
     font-size: 2.8rem;
+    
+    transition: all .5s;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
   }
   &__legend {
     width: 100%;

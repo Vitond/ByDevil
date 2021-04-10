@@ -1,4 +1,5 @@
 @import '../../variables.scss'; 
+@import '../../animations.scss';
 
 .Header {
   height: 100vh;
@@ -20,6 +21,9 @@
     font-weight: 400;
     color: $color-white;
     text-align: center;
+
+    animation: bounce 2s infinite;
+    animation-timing-function: ease-in-out;
 
     @media screen and (max-width: 600px) {
       padding-top: 26rem;
@@ -55,12 +59,18 @@
     right: 50%;
     transform: translate(-50%, -50%);
 
+    transition: all .5s;
+
     @media screen and (max-width: 600px) {
       height: 6rem;
 
       font-size: 2.2rem;
 
       bottom: 8rem; 
+    }
+
+    &:hover {
+      transform: translate(-50%,calc(-50% - 1rem));
     }
   }
   &__torn {

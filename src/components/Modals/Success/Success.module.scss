@@ -1,0 +1,67 @@
+@import '../../../variables.scss';
+
+.Success {
+  width: 54rem;
+  height: 60rem;
+  background-color: $color-gray-light-2;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+
+  &__BD {
+    fill: $color-blood;
+    width: 6rem;
+    height: 100%;
+  }
+  &__logo {
+    fill: #7A4145;
+    width: 6rem;
+    height: 100%;
+  }
+  &__svgs {
+    margin-top: 1.5rem;
+    height: 7rem;
+
+    display: flex;
+    justify-content: center;
+  }
+  &__text {
+    width: 100%;
+
+    color: $color-black;
+    text-align: center;
+    font-size: 2.7rem;
+
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+
+  }
+  &__button {
+    height: 5rem;
+    width: 20rem;
+    background-color: $color-blood;
+
+    font-size: 2.2rem;
+
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 6rem;
+    position: absolute;
+  }
+  &__thanks {
+    width: 100%;
+
+    color: $color-black;
+    text-align: center;
+    font-size: 2rem;
+
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 16rem;
+    position: absolute;
+  }
+}

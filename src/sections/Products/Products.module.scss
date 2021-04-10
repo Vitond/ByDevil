@@ -5,6 +5,9 @@
 
   position: relative;
 
+  animation: bounce 2s infinite;
+  animation-timing-function: ease-in-out;
+
   @media screen and (max-width: 600px) {
     margin-bottom: 18rem;
   }

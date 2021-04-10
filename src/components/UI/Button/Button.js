@@ -15,7 +15,7 @@ class Button extends Component {
     }
 
     return (
-      <button onClick={this.props.clicked} className={classList.join(' ')}>{this.props.text}</button>
+      <button onClick={this.props.clicked} disabled={this.props.disabled} className={classList.join(' ')}>{this.props.text}</button>
     );
 
   }

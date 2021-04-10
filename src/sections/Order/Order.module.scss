@@ -88,6 +88,12 @@
     top: 3rem;
     right: 0;
 
+    transition: all .2s;
+
+    &:hover {
+      transform: scale(0.95);
+    }
+
     &::before,
     &::after {
       content: "";

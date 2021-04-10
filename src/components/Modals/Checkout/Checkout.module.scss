@@ -1,10 +1,9 @@
 @import '../../../variables.scss';
 
 .Checkout {
-  width: 50%;
+  width: 90rem;
   height: 60rem;
   background-color: $color-gray-light-2;
-  border: 8px solid rgba($color-gray-light-2, .25);
 
   display: flex;
 
@@ -12,12 +11,29 @@
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  z-index: 1;
+  z-index: 1000;
+
+  @media screen and (max-width: 800px) {
+    height: 90vh;
+    width: 48rem;
+    padding-bottom: 6rem;
+
+    flex-direction: column;
+
+    overflow-y: scroll;
+  }
+  @media screen and (max-width: 420px) {
+    width: 100%;
+  }
 
   &__left {
     width: 50%;
     margin-top: 1.5rem;
     border-right: 2px solid rgba($color-brown, .1);
+
+    @media screen and (max-width: 800px) {
+      width: 100%;
+    }
   }
   &__right {
     width: 50%;
@@ -29,6 +45,10 @@
     position: relative;
     top: 0;
     left: 0;
+
+    @media screen and (max-width: 800px) {
+      width: 100%;
+    }
   }
   &__product {
     margin-left: auto;
@@ -40,6 +60,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 800px) {
+      border-top: none;
+      border-bottom: 2px solid rgba($color-brown, .1);
+    }
 
     &:last-child {
       border-bottom: 2px solid rgba($color-brown, .1);
@@ -76,14 +101,41 @@
     height: 4rem;
     border: none;
     outline: none;
+    padding-left: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+
+    position: relative;
     
     background: radial-gradient(135.61% 135.62% at 50% 50%, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+
+    & div {
+      width: 100%;
+    }
+    &_cvc {
+      padding-left: 0;
+
+      text-align: center;
+
+      justify-content: center;
+
+      & div {
+        width: 3rem;
+
+        @media screen and (max-width: 1400px) {
+          width: 3.5rem;
+        }
+      }
+    }
+    &_expDate {
+
+    }
   }
   &__set {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-
+    width: 100%;
+  
     color: $color-black;
     font-size: 1.9rem;
 
@@ -91,20 +143,56 @@
     flex-direction: column;
 
     &:not(:last-child) {
+      margin-right: 10rem;
+    }
+  }
+  &__row {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+
+    &:not(:last-child) {
       margin-bottom: 1rem;
+
+      @media screen and (max-width: 500px) {
+        margin-bottom: 1.5rem;
+      }
     }
   }
   &__label {
-
+    @media screen and (max-width: 500px) {
+      font-size: 1.6rem;
+    }
   }
   &__button {
-    margin-top: 3rem;
+    margin-top: 4rem;
     margin-left: auto;
     margin-right: auto;
-    height: 4rem;
+    height: 4.7rem;
     width: 20rem;
     background-color: $color-blood;
 
     font-size: 2.2rem;
+
+    transition: all .1s;
+
+    &:disabled {
+      background-color: $color-gray;
+      cursor: default;
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+  &__error {
+    width: 80%;
+    height: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    color: black;
   }
 }

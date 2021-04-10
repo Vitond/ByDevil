@@ -221,6 +221,8 @@ def generate_invoice_pdf(order):
     'margin-left': '0in',
   }
   pdfkit.from_file(f"invoice/invoice-{order['databaseId']}.html", f"invoice/invoice-{order['databaseId']}.pdf", options=options)
+  os.remove(f"invoice/invoice-{order['databaseId']}.html")
+
 
 def send_invoice(**args):
   msg = Message("Hello",

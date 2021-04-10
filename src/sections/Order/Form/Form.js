@@ -8,7 +8,8 @@ class Form extends Component {
 
   state = {
     selectedPayment: payment.DOB,
-    selectedDelivery: delivery.PPL
+    selectedDelivery: delivery.PPL,
+    disabled: true
   }
 
   componentDidMount() {
@@ -31,6 +32,7 @@ class Form extends Component {
     } else {
       input.classList.remove(classes.invalid);
     }
+    this.validateForm();
   };
 
   validate = data => {
@@ -50,56 +52,59 @@ class Form extends Component {
     return inputRegExp.test(finalValue.trim());
   };
 
-  validateForm = () => {
-    const form = document.getElementById('form');
+  validateForm = (form) => {
     const formData = new FormData(form);
 
     let isFormValid = true;
+    const invalidElements = [];
 
     for (const row of formData) {
       if (this.validate(row) === false) {
         const inputName = row[0];
         const inputEl = document.getElementById(inputName);
         if (inputEl) {
-          inputEl.classList.add(classes.invalid);
+          invalidElements.push(inputEl);
         }
         isFormValid = false;
       };
     }
 
-    return isFormValid;
+    this.setState({disabled: !isFormValid});
+
+    return invalidElements;
   };
 
   orderHandler = event => {
     event.preventDefault();
-    const form = event.target.form;
-    const isFormValid = this.validateForm(form);
-    if (!isFormValid) {
-      return;
+    const formData = new FormData(event.target.form);
+    const body = {};
+    for (const row of formData) {
+      body[row[0]] = row[1];
     }
+    body.products = this.props.basket.products;
+    const invalidElements = this.validateForm(event.target.form);
 
-    this.props.history.push('/order/checkout');
-
-    // const stripe = window.Stripe("pk_test_51IY5xGHloBxDNHwGs2qpiTwp27AmA8yh6VUEywdzWEfJcxiGao1dX7otXoOZzAfmam2YHfhTMFQ0b21dDg4W0DpV00YjosZSLc");
-    
-    // fetch("/create-checkout-session", {
-    //     method: "POST",
-    //     mode: 'no-cors'
-    // })
-    // .then(response => {
-    //   return response.json();
-    // })
-    // .then(session => {
-    //   return stripe.redirectToCheckout({ sessionId: session.id });
-    // })
-    // .then(result => {
-    //   if (result.error) {
-    //     console.log(result.error.message)
-    //   }
-    // })
-    // .catch(error => {
-    //   console.log(error);
-    // })
+    if (invalidElements.length > 0) {
+      for (const element of invalidElements) {
+        element.classList.add(classes.invalid);
+      }
+      return;
+    } else {
+      console.log(body);
+      fetch('/orders', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(body)})
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        console.log(data);
+        const databaseId = data['database_id'];
+        this.props.history.push(`/order/checkout/?dbid=${databaseId}`);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+      
+    }
   }
 
   render() {

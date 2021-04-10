@@ -6,15 +6,9 @@ import * as classes from './Products.module.scss';
 
 class Products extends Component {
 
-  constructor(props) {
-    super();
-
-    this.products = props.products;
-  }
-
   render() {
 
-    const productList = this.products.map(product => {
+    const productList = this.props.products.map(product => {
       return <Product addProductToBasket={this.props.addProductToBasket} product={product}/>
     });
 
