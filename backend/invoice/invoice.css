@@ -1,8 +1,133 @@
-p {
-  color: red;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
 }
-div {
-  width: 1080px;
-  height: 1920px;
-  background-color: gray;
+
+html {
+  font-size: 60%;
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.faktura {
+  height: 1512px;
+  width: 1069px;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 10rem;
+
+  position: relative;
+}
+
+.columns {
+  font-size: 2.4rem;
+
+  display: flex;
+  justify-content: space-between;
+
+}
+.columns p:not(:last-child) {
+  margin-bottom: .7rem;
+}
+
+.svgs {
+  
+}
+.svgs .logo {
+  width: 10rem;
+  height: 15rem;
+}
+.svgs .BD {
+  width: 12rem;
+  height: 15rem;
+}
+.dodavatel {
+  font-size: 2.4rem;
+
+  position: absolute;
+  top: 10rem;
+  right: 10rem;
+}
+.dodavatel p:first-child {
+  font-weight: 600;
+}
+.dodavatel p:not(:last-child) {
+  margin-bottom: .7rem;
+}
+.heading {
+  font-weight: 400;
+  font-size: 4.8rem;
+
+  margin-top: 16rem;
+  margin-bottom: 4rem;
+}
+.table {
+  border: 2px solid black;
+  margin-top: 8rem;
+
+  font-size: 2.4rem;
+}
+.table-row {
+  height: 100%;
+
+  position: relative;
+}
+.table-row > * {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  
+}
+.table-row :first-child {
+  left: 0;
+}
+.table-row :nth-child(2) {
+  left: 40%;
+}
+.table-row :nth-child(3) {
+  left: 60%;
+}
+.table-row :nth-child(4) {
+  left: 85%;
+}
+.table-top {
+  height: 6rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  border-bottom : 2px solid black;
+}
+.table-body .table-row {
+  height: 8rem;
+}
+.table-body {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  border-bottom: 2px solid black;
+}
+.table-bottom {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+.sum {
+  margin-bottom: 4rem;
+
+  text-align: center;
+}
+.already-paid {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.noDPH {
+  margin-top: 8rem;
+
+  font-size: 2.4rem;
 }

@@ -1,0 +1,128 @@
+[2021-04-06 17:54:13 +0200] [414] [INFO] Starting gunicorn 20.1.0
+[2021-04-06 17:54:13 +0200] [414] [INFO] Listening at: http://0.0.0.0:8080 (414)
+[2021-04-06 17:54:13 +0200] [414] [INFO] Using worker: sync
+[2021-04-06 17:54:13 +0200] [415] [INFO] Booting worker with pid: 415
+Failed to find attribute 'application' in 'app'.
+[2021-04-06 17:54:14 +0200] [415] [INFO] Worker exiting (pid: 415)
+[2021-04-06 17:54:15 +0200] [414] [INFO] Shutting down: Master
+[2021-04-06 17:54:15 +0200] [414] [INFO] Reason: App failed to load.
+[2021-04-06 17:54:16 +0200] [420] [INFO] Starting gunicorn 20.1.0
+[2021-04-06 17:54:16 +0200] [420] [INFO] Listening at: http://0.0.0.0:8080 (420)
+[2021-04-06 17:54:16 +0200] [420] [INFO] Using worker: sync
+[2021-04-06 17:54:16 +0200] [421] [INFO] Booting worker with pid: 421
+Failed to find attribute 'application' in 'app'.
+[2021-04-06 17:54:16 +0200] [421] [INFO] Worker exiting (pid: 421)
+[2021-04-06 17:54:17 +0200] [420] [INFO] Shutting down: Master
+[2021-04-06 17:54:17 +0200] [420] [INFO] Reason: App failed to load.
+[2021-04-06 17:54:18 +0200] [426] [INFO] Starting gunicorn 20.1.0
+[2021-04-06 17:54:18 +0200] [426] [INFO] Listening at: http://0.0.0.0:8080 (426)
+[2021-04-06 17:54:18 +0200] [426] [INFO] Using worker: sync
+[2021-04-06 17:54:18 +0200] [427] [INFO] Booting worker with pid: 427
+Failed to find attribute 'application' in 'app'.
+[2021-04-06 17:54:19 +0200] [427] [INFO] Worker exiting (pid: 427)
+[2021-04-06 17:54:19 +0200] [426] [INFO] Shutting down: Master
+[2021-04-06 17:54:19 +0200] [426] [INFO] Reason: App failed to load.
+[2021-04-06 17:54:21 +0200] [432] [INFO] Starting gunicorn 20.1.0
+[2021-04-06 17:54:21 +0200] [432] [INFO] Listening at: http://0.0.0.0:8080 (432)
+[2021-04-06 17:54:21 +0200] [432] [INFO] Using worker: sync
+[2021-04-06 17:54:21 +0200] [433] [INFO] Booting worker with pid: 433
+Failed to find attribute 'application' in 'app'.
+[2021-04-06 17:54:21 +0200] [433] [INFO] Worker exiting (pid: 433)
+[2021-04-06 17:54:22 +0200] [432] [INFO] Shutting down: Master
+[2021-04-06 17:54:22 +0200] [432] [INFO] Reason: App failed to load.
+[2021-04-06 17:54:23 +0200] [438] [INFO] Starting gunicorn 20.1.0
+[2021-04-06 17:54:23 +0200] [438] [INFO] Listening at: http://0.0.0.0:8080 (438)
+[2021-04-06 17:54:23 +0200] [438] [INFO] Using worker: sync
+[2021-04-06 17:54:23 +0200] [439] [INFO] Booting worker with pid: 439
+Failed to find attribute 'application' in 'app'.
+[2021-04-06 17:54:24 +0200] [439] [INFO] Worker exiting (pid: 439)
+[2021-04-06 17:54:24 +0200] [438] [INFO] Shutting down: Master
+[2021-04-06 17:54:24 +0200] [438] [INFO] Reason: App failed to load.
+[2021-04-06 17:54:25 +0200] [444] [INFO] Starting gunicorn 20.1.0
+[2021-04-06 17:54:25 +0200] [444] [INFO] Listening at: http://0.0.0.0:8080 (444)
+[2021-04-06 17:54:25 +0200] [444] [INFO] Using worker: sync
+[2021-04-06 17:54:25 +0200] [445] [INFO] Booting worker with pid: 445
+Failed to find attribute 'application' in 'app'.
+[2021-04-06 17:54:26 +0200] [445] [INFO] Worker exiting (pid: 445)
+[2021-04-06 17:54:26 +0200] [444] [INFO] Shutting down: Master
+[2021-04-06 17:54:26 +0200] [444] [INFO] Reason: App failed to load.
+[2021-04-06 17:54:28 +0200] [450] [INFO] Starting gunicorn 20.1.0
+[2021-04-06 17:54:28 +0200] [450] [INFO] Listening at: http://0.0.0.0:8080 (450)
+[2021-04-06 17:54:28 +0200] [450] [INFO] Using worker: sync
+[2021-04-06 17:54:28 +0200] [451] [INFO] Booting worker with pid: 451
+Failed to find attribute 'application' in 'app'.
+[2021-04-06 17:54:28 +0200] [451] [INFO] Worker exiting (pid: 451)
+[2021-04-06 17:54:29 +0200] [450] [INFO] Shutting down: Master
+[2021-04-06 17:54:29 +0200] [450] [INFO] Reason: App failed to load.
+[2021-04-06 17:54:30 +0200] [456] [INFO] Starting gunicorn 20.1.0
+[2021-04-06 17:54:30 +0200] [456] [INFO] Listening at: http://0.0.0.0:8080 (456)
+[2021-04-06 17:54:30 +0200] [456] [INFO] Using worker: sync
+[2021-04-06 17:54:30 +0200] [457] [INFO] Booting worker with pid: 457
+Failed to find attribute 'application' in 'app'.
+[2021-04-06 17:54:31 +0200] [457] [INFO] Worker exiting (pid: 457)
+[2021-04-06 17:54:31 +0200] [456] [INFO] Shutting down: Master
+[2021-04-06 17:54:31 +0200] [456] [INFO] Reason: App failed to load.
+[2021-04-06 17:54:33 +0200] [462] [INFO] Starting gunicorn 20.1.0
+[2021-04-06 17:54:33 +0200] [462] [INFO] Listening at: http://0.0.0.0:8080 (462)
+[2021-04-06 17:54:33 +0200] [462] [INFO] Using worker: sync
+[2021-04-06 17:54:33 +0200] [463] [INFO] Booting worker with pid: 463
+Failed to find attribute 'application' in 'app'.
+[2021-04-06 17:54:33 +0200] [463] [INFO] Worker exiting (pid: 463)
+[2021-04-06 17:54:34 +0200] [462] [INFO] Shutting down: Master
+[2021-04-06 17:54:34 +0200] [462] [INFO] Reason: App failed to load.
+[2021-04-06 17:54:34 +0200] [468] [INFO] Starting gunicorn 20.1.0
+[2021-04-06 17:54:34 +0200] [468] [INFO] Listening at: http://0.0.0.0:8080 (468)
+[2021-04-06 17:54:34 +0200] [468] [INFO] Using worker: sync
+[2021-04-06 17:54:34 +0200] [469] [INFO] Booting worker with pid: 469
+Failed to find attribute 'application' in 'app'.
+[2021-04-06 17:54:34 +0200] [469] [INFO] Worker exiting (pid: 469)
+[2021-04-06 17:54:35 +0200] [468] [INFO] Shutting down: Master
+[2021-04-06 17:54:35 +0200] [468] [INFO] Reason: App failed to load.
+[2021-04-06 17:54:36 +0200] [474] [INFO] Starting gunicorn 20.1.0
+[2021-04-06 17:54:36 +0200] [474] [INFO] Listening at: http://0.0.0.0:8080 (474)
+[2021-04-06 17:54:36 +0200] [474] [INFO] Using worker: sync
+[2021-04-06 17:54:36 +0200] [475] [INFO] Booting worker with pid: 475
+Failed to find attribute 'application' in 'app'.
+[2021-04-06 17:54:37 +0200] [475] [INFO] Worker exiting (pid: 475)
+[2021-04-06 17:54:37 +0200] [474] [INFO] Shutting down: Master
+[2021-04-06 17:54:37 +0200] [474] [INFO] Reason: App failed to load.
+[2021-04-06 17:54:39 +0200] [480] [INFO] Starting gunicorn 20.1.0
+[2021-04-06 17:54:39 +0200] [480] [INFO] Listening at: http://0.0.0.0:8080 (480)
+[2021-04-06 17:54:39 +0200] [480] [INFO] Using worker: sync
+[2021-04-06 17:54:39 +0200] [481] [INFO] Booting worker with pid: 481
+Failed to find attribute 'application' in 'app'.
+[2021-04-06 17:54:39 +0200] [481] [INFO] Worker exiting (pid: 481)
+[2021-04-06 17:54:40 +0200] [480] [INFO] Shutting down: Master
+[2021-04-06 17:54:40 +0200] [480] [INFO] Reason: App failed to load.
+[2021-04-06 17:54:40 +0200] [486] [INFO] Starting gunicorn 20.1.0
+[2021-04-06 17:54:40 +0200] [486] [INFO] Listening at: http://0.0.0.0:8080 (486)
+[2021-04-06 17:54:40 +0200] [486] [INFO] Using worker: sync
+[2021-04-06 17:54:40 +0200] [487] [INFO] Booting worker with pid: 487
+Failed to find attribute 'application' in 'app'.
+[2021-04-06 17:54:41 +0200] [487] [INFO] Worker exiting (pid: 487)
+[2021-04-06 17:54:41 +0200] [486] [INFO] Shutting down: Master
+[2021-04-06 17:54:41 +0200] [486] [INFO] Reason: App failed to load.
+[2021-04-06 17:54:43 +0200] [492] [INFO] Starting gunicorn 20.1.0
+[2021-04-06 17:54:43 +0200] [492] [INFO] Listening at: http://0.0.0.0:8080 (492)
+[2021-04-06 17:54:43 +0200] [492] [INFO] Using worker: sync
+[2021-04-06 17:54:43 +0200] [493] [INFO] Booting worker with pid: 493
+Failed to find attribute 'application' in 'app'.
+[2021-04-06 17:54:43 +0200] [493] [INFO] Worker exiting (pid: 493)
+[2021-04-06 17:54:44 +0200] [492] [INFO] Shutting down: Master
+[2021-04-06 17:54:44 +0200] [492] [INFO] Reason: App failed to load.
+[2021-04-06 17:54:45 +0200] [498] [INFO] Starting gunicorn 20.1.0
+[2021-04-06 17:54:45 +0200] [498] [INFO] Listening at: http://0.0.0.0:8080 (498)
+[2021-04-06 17:54:45 +0200] [498] [INFO] Using worker: sync
+[2021-04-06 17:54:45 +0200] [499] [INFO] Booting worker with pid: 499
+Failed to find attribute 'application' in 'app'.
+[2021-04-06 17:54:45 +0200] [499] [INFO] Worker exiting (pid: 499)
+[2021-04-06 17:54:46 +0200] [498] [INFO] Shutting down: Master
+[2021-04-06 17:54:46 +0200] [498] [INFO] Reason: App failed to load.
+[2021-04-06 17:54:47 +0200] [504] [INFO] Starting gunicorn 20.1.0
+[2021-04-06 17:54:47 +0200] [504] [INFO] Listening at: http://0.0.0.0:8080 (504)
+[2021-04-06 17:54:47 +0200] [504] [INFO] Using worker: sync
+[2021-04-06 17:54:47 +0200] [505] [INFO] Booting worker with pid: 505
+Failed to find attribute 'application' in 'app'.
+[2021-04-06 17:54:48 +0200] [505] [INFO] Worker exiting (pid: 505)
+[2021-04-06 17:54:48 +0200] [504] [INFO] Shutting down: Master
+[2021-04-06 17:54:48 +0200] [504] [INFO] Reason: App failed to load.
