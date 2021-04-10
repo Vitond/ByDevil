@@ -10,25 +10,7 @@ import re
 
 # SETUP
 
-mongo_client = pymongo.MongoClient("mongodb://Ove:rofl@clustr-shard-00-00.bdnkm.mongodb.net:27017,clustr-shard-00-01.bdnkm.mongodb.net:27017,clustr-shard-00-02.bdnkm.mongodb.net:27017/db?ssl=true&replicaSet=atlas-rqnhtl-shard-0&authSource=admin&retryWrites=true&w=majority")
 
-database = mongo_client["db"]
-
-orders = database["orders"]
-
-stripe.api_key = 'sk_test_51IY5xGHloBxDNHwGowYBslzs8Y3Y29joKAEX3TbNm59TGym59AgIk7hlE8jDZMDElHumAs8XpRWTcrrd4xozLnwv00I6ZJPgv6'
-
-invoice_count = 1
-
-app = Flask(__name__)
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_USE_SSL'] =  True
-app.config['MAIL_USE_TSL'] =  True
-app.config['MAIL_PASSWORD'] = 'S&2?_:xBdG.D6b[p'
-app.config['MAIL_USERNAME'] = 'tmailestest@gmail.com'
-app.config['MAIL_PORT'] = 465
-app.config["MONGO_URI"] = "mongodb://localhost:27017/db"
-mail = Mail(app)
 
 application = app
 
